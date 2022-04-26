@@ -1,16 +1,10 @@
-# dp-j/lab-redis
-
-
+# lab-redis
 
 ## Getting Started
 
 Download links:
 
-SSH clone URL: ssh://git@git.jetbrains.space/my-projects/dp-j/lab-redis.git
-
-HTTPS clone URL: https://git.jetbrains.space/my-projects/dp-j/lab-redis.git
-
-
+https://github.com/dizanetti/java
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 

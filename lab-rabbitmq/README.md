@@ -1,16 +1,10 @@
-# dp-j/lab-rabbitmq
-
-
+# lab-rabbitmq
 
 ## Getting Started
 
 Download links:
 
-SSH clone URL: ssh://git@git.jetbrains.space/my-projects/dp-j/lab-rabbitmq.git
-
-HTTPS clone URL: https://git.jetbrains.space/my-projects/dp-j/lab-rabbitmq.git
-
-
+https://github.com/dizanetti/java
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -19,7 +13,8 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them.
 
 ```
-Examples
+docker pull rabbitmq
+docker run -d --hostname local-rabbit --name rabbit-mq -p 15672:15672 -p 5672:5672 rabbitmq:3.9.7-management              
 ```
 
 ## Deployment

@@ -1,12 +1,10 @@
-# dp-j/lab-docker-image
+# lab-docker-image
 
 ## Getting Started
 
 Download links:
 
-SSH clone URL: ssh://git@git.jetbrains.space/my-projects/dp-j/lab-docker-image.git
-
-HTTPS clone URL: https://git.jetbrains.space/my-projects/dp-j/lab-docker-image.git
+https://github.com/dizanetti/java
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 

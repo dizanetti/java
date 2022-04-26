@@ -1,16 +1,10 @@
-# dp-j/lab-serialization
-
-
+# lab-serialization
 
 ## Getting Started
 
 Download links:
 
-SSH clone URL: ssh://git@git.jetbrains.space/my-projects/dp-j/lab-serialization.git
-
-HTTPS clone URL: https://git.jetbrains.space/my-projects/dp-j/lab-serialization.git
-
-
+https://github.com/dizanetti/java
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 

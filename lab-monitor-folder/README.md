@@ -1,16 +1,10 @@
-# dp-j/lab-monitor-folder
-
-
+# lab-monitor-folder
 
 ## Getting Started
 
 Download links:
 
-SSH clone URL: ssh://git@git.jetbrains.space/my-projects/dp-j/lab-monitor-folder.git
-
-HTTPS clone URL: https://git.jetbrains.space/my-projects/dp-j/lab-monitor-folder.git
-
-
+https://github.com/dizanetti/java
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
