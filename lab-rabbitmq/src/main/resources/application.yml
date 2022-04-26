@@ -1,0 +1,20 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        convertToUppercase-in-0:
+          destination: values-topic
+          group: processor
+        convertToUppercase-out-0:
+          destination: uppercase-values-topic
+        onReceive-in-0:
+          destination: uppercase-values-topic
+          group: consumer
+    function:
+      definition: convertToUppercase;onReceive
+
