@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: lab-grafana
+management:
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    metrics:
+      tag:
+        application: lab-grafana
+      enabled: true
+    prometheus:
+      enabled: true
+    health:
+      show-details: always
+
