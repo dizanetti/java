@@ -1,0 +1,9 @@
+### path
+@baseUrl = http://localhost:8070
+
+### GET profile DEV ms-partner
+GET {{baseUrl}}/ms-partner/dev HTTP/1.1
+
+### GET profile PROD ms-partner
+GET {{baseUrl}}/ms-partner/prod HTTP/1.1
+
