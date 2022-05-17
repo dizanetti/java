@@ -8,6 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/dizanetti/cloud-config-server-lab
+          uri: https://github.com/dizanetti/cloud-config-server-lab.git
           search-paths:
             - ms-partner
+          default-label: master
