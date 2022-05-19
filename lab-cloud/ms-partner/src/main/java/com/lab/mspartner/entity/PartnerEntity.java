@@ -1,4 +1,4 @@
-package com.lab.mspartner.model;
+package com.lab.mspartner.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,11 +10,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @NoArgsConstructor
 @Document("partner")
-public class Partner {
+public class PartnerEntity {
 
     @Id
     private String id;
     private String name;
-    private Address address;
+    private AddressEntity address;
     private String phone;
 }
