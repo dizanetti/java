@@ -8,11 +8,12 @@ import lombok.NoArgsConstructor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PartnerRequest {
+public class PartnerRequest implements Serializable {
 
     @NotBlank(message = "Name is blank")
     private String name;

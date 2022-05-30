@@ -23,6 +23,8 @@ import static org.springframework.http.HttpStatus.*;
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
+    private static final String ERROR_LABEL = "Error: ";
+
     @ExceptionHandler(PartnerNotFoundException.class)
     public ResponseEntity<Void> partnerNotFound(Exception ex) {
         log.warn("Partner not found: ", ex);
@@ -34,7 +36,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErroResponse> internalServerError(Exception ex) {
-        log.error("Error: ", ex);
+        log.error(ERROR_LABEL, ex);
 
         ErroResponse error = new ErroResponse();
         error.setTimestamp(LocalDateTime.now());
@@ -45,8 +47,8 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(PartnerException.class)
-    public ResponseEntity<ErroResponse> serviceError(Exception ex) {
-        log.error("Error: ", ex);
+    public ResponseEntity<ErroResponse> partnerServiceError(Exception ex) {
+        log.error(ERROR_LABEL, ex);
 
         ErroResponse error = new ErroResponse();
         error.setTimestamp(LocalDateTime.now());
@@ -59,7 +61,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers,
             HttpStatus status, WebRequest request) {
-        log.error("Error: ", ex);
+        log.error(ERROR_LABEL, ex);
 
         List<String> errors = new ArrayList<>();
         for (FieldError error : ex.getBindingResult().getFieldErrors()) {
