@@ -5,3 +5,4 @@
 * Spring Validation
 * Spring Cache - Redis
 * Spring Retry wirh Recover
+* Spring RabbitMQ
