@@ -75,6 +75,14 @@ public class PartnerService {
         return cnpjCpf;
     }
 
+    public Long updatePartner(PartnerRequest request) {
+        log.info("update partner {}", request.getCnpjCpf());
+
+        //TODO: implements
+
+        return request.getCnpjCpf();
+    }
+
     @Recover
     public PartnerEntity recoverPartnerServiceFallback(PartnerException partnerException, PartnerRequest request) {
         log.info("Recover from a connection error. Put the partner on a queue to be process lately!");

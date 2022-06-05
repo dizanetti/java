@@ -37,4 +37,9 @@ public class PartnerController {
     public ResponseEntity<Long> deletePartner(@PathVariable Long cnpjCpf) {
         return new ResponseEntity<>(partnerService.deletePartner(cnpjCpf), HttpStatus.OK);
     }
+
+    @PatchMapping
+    public ResponseEntity<Long> updatePartner(@RequestBody @Valid PartnerRequest request) {
+        return new ResponseEntity<>(partnerService.updatePartner(request), HttpStatus.OK);
+    }
 }
