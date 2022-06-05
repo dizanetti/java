@@ -67,6 +67,14 @@ public class PartnerService {
                 .orElseThrow(() -> new PartnerNotFoundException("Can not find partner by " + cnpjCpf));
     }
 
+    public Long deletePartner(Long cnpjCpf) {
+        log.info("delete partner {}", cnpjCpf);
+
+        partnerGateway.deleteByCnpjCpf(cnpjCpf);
+
+        return cnpjCpf;
+    }
+
     @Recover
     public PartnerEntity recoverPartnerServiceFallback(PartnerException partnerException, PartnerRequest request) {
         log.info("Recover from a connection error. Put the partner on a queue to be process lately!");

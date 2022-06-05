@@ -32,4 +32,9 @@ public class PartnerController {
     public ResponseEntity<PartnerEntity> getPartner(@PathVariable Long cnpjCpf) {
         return new ResponseEntity<>(partnerService.getPartner(cnpjCpf), HttpStatus.OK);
     }
+
+    @DeleteMapping("/delete/{cnpjCpf}")
+    public ResponseEntity<Long> deletePartner(@PathVariable Long cnpjCpf) {
+        return new ResponseEntity<>(partnerService.deletePartner(cnpjCpf), HttpStatus.OK);
+    }
 }

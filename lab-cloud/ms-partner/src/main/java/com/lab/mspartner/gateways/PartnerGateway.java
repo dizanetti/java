@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface PartnerGateway extends MongoRepository<PartnerEntity, String> {
 
     PartnerEntity findByCnpjCpf(Long cnpjCpf);
+
+    void deleteByCnpjCpf(Long cnpjCpf);
 }
