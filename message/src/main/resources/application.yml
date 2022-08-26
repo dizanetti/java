@@ -1,0 +1,4 @@
+twilio:
+  accountSid: ${ACCOUNT_SID}
+  authToken: ${AUTH_TOKEN}
+  trialNumber: ${TRIAL_NUMBER}
