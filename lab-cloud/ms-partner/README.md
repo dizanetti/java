@@ -6,4 +6,4 @@
 * Spring Cache - Redis
 * Spring Retry with Recover
 * Spring RabbitMQ
-* Service and Discovery - Consul
+* Service and Discovery - Consul http://localhost:8500/v1/catalog/service/ms-partner
