@@ -1,0 +1,5 @@
+# build project spring boot
+mvn -Pnative -DskipTests clean package
+
+# Test
+http GET http://localhost:8080/demo

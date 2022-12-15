@@ -1,10 +1,10 @@
-package com.poc.labgraavm;
+package com.graalvmdemo.lab;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LabGraavmApplicationTests {
+class LabApplicationTests {
 
 	@Test
 	void contextLoads() {
