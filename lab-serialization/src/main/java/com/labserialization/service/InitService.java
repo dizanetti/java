@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.math.BigDecimal;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Slf4j
 @Service
@@ -24,9 +27,29 @@ public class InitService {
      */
     @PostConstruct
     public void init() {
-        withSerialization(new Person("Jhon", 40, new BigDecimal(9000)));
-        withTransient(new PersonWithTransient("Jhon", 40, new BigDecimal(9000)));
-        withoutSerialization(new PersonWithOutSerializable("Jhon", 40, new BigDecimal(9000)));
+        String bundleSelection= "7637,7636,7635";
+
+        List<Long> convertedBundleSelection = Stream.of(bundleSelection.split(","))
+                .map(String::trim)
+                .map(Long::parseLong)
+                .collect(Collectors.toList());
+
+        //withSerialization(new Person("Jhon", 40, new BigDecimal(9000)));
+        //withTransient(new PersonWithTransient("Jhon", 40, new BigDecimal(9000)));
+        //withoutSerialization(new PersonWithOutSerializable("Jhon", 40, new BigDecimal(9000)));
+
+        log.info(convertedBundleSelection.toString());
+
+        Boolean result = convertedBundleSelection.stream().filter(b -> {
+            log.info(b.toString());
+
+            if (b.compareTo(7636L) == 0)
+                return true;
+
+            return false;
+        }).findFirst().isPresent();
+
+        log.info(result.toString());
     }
 
     private void withSerialization(Person person) {
