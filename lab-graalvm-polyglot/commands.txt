@@ -1,0 +1,19 @@
+## COMMANDS GRAAL
+
+gu.cmd install native-image
+gu.cmd list
+gu.cmd install js
+
+gu.cmd available
+##
+
+## AOT - NATIVE IMAGE
+# Prompt Native Visual Studio
+
+javac HelloWorld.java
+java HelloWorld
+native-image HelloWorld
+
+# PowerShell
+helloworld.exe
+##
