@@ -1,0 +1,71 @@
+### path
+@baseUrl = http://localhost:8080/engine-rest
+
+###### TASKS ######
+
+### GET all tasks
+GET {{baseUrl}}/task HTTP/1.1
+
+### GET task by id
+GET {{baseUrl}}/task/c7a66058-cfa0-11ed-b2da-00090ffe0001 HTTP/1.1
+###### TASKS ######
+###### PROCESS DEFINITION ######
+
+### Print Welcome Message
+POST {{baseUrl}}/process-definition/key/personal-message/start HTTP/1.1
+Content-Type: application/json
+
+{
+    "variables": {
+        "userName": {
+            "value": "diego",
+            "type": "String"
+        }
+    }
+}
+
+### Calculate Salary
+POST {{baseUrl}}/process-definition/key/calculate-salary/start HTTP/1.1
+Content-Type: application/json
+
+{
+    "variables": {
+        "salary": {
+            "value": 1000,
+            "type": "Integer"
+        },
+        "bonus": {
+            "value": 15,
+            "type":"Integer"
+        }
+    }
+}
+###### PROCESS DEFINITION ######
+###### USER TASK ######
+
+### Who is it?
+POST {{baseUrl}}/process-definition/key/who-is-it/start HTTP/1.1
+Content-Type: application/json
+
+{
+    "variables": {
+        "userName": {
+            "value": "diego",
+            "type": "String"
+        }
+    }
+}
+
+### Verify User
+POST {{baseUrl}}/task/c7a66058-cfa0-11ed-b2da-00090ffe0001/complete HTTP/1.1
+Content-Type: application/json
+
+{
+    "variables": {
+        "userName": {
+            "value": "diego",
+            "type": "String"
+        }
+    }
+}
+###### USER TASK ######

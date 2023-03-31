@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0abjt1q" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.9.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.19.0">
+  <bpmn:process id="personal-message" name="Personal Message" isExecutable="true" camunda:versionTag="1.0.0">
+    <bpmn:startEvent id="StartEvent_1" name="Start">
+      <bpmn:outgoing>Flow_1xz2w9j</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1xz2w9j" sourceRef="StartEvent_1" targetRef="service-task-log-on-console" />
+    <bpmn:serviceTask id="service-task-log-on-console" name="Log on Console" camunda:delegateExpression="${consoleLoggerDelegate}">
+      <bpmn:incoming>Flow_1xz2w9j</bpmn:incoming>
+      <bpmn:outgoing>Flow_0qqbkp5</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_1bfwvgf" name="End">
+      <bpmn:incoming>Flow_0qqbkp5</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0qqbkp5" sourceRef="service-task-log-on-console" targetRef="Event_1bfwvgf" />
+    <bpmn:textAnnotation id="TextAnnotation_0wa9m3y">
+      <bpmn:text>Exibe Mensagem de texto de boas vindas no console da aplicação</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_08x2fsg" sourceRef="service-task-log-on-console" targetRef="TextAnnotation_0wa9m3y" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="personal-message">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="189" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="185" y="232" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0iy8kxd_di" bpmnElement="service-task-log-on-console">
+        <dc:Bounds x="270" y="167" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1bfwvgf_di" bpmnElement="Event_1bfwvgf">
+        <dc:Bounds x="432" y="189" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="440" y="232" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0wa9m3y_di" bpmnElement="TextAnnotation_0wa9m3y">
+        <dc:Bounds x="300" y="80" width="248" height="41" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1xz2w9j_di" bpmnElement="Flow_1xz2w9j">
+        <di:waypoint x="215" y="207" />
+        <di:waypoint x="270" y="207" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qqbkp5_di" bpmnElement="Flow_0qqbkp5">
+        <di:waypoint x="370" y="207" />
+        <di:waypoint x="432" y="207" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_08x2fsg_di" bpmnElement="Association_08x2fsg">
+        <di:waypoint x="331" y="167" />
+        <di:waypoint x="343" y="121" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

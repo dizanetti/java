@@ -1,0 +1,9 @@
+camunda.bpm.admin-user:
+  id: diego
+  password: portalInterno182
+
+spring.datasource.url: jdbc:h2:mem:camunda-h2-database;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+
+spring.h2.console:
+  enabled: true
+  path: /h2-console
