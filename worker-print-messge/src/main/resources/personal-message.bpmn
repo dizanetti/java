@@ -14,7 +14,7 @@
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_0qqbkp5" sourceRef="service-task-log-on-console" targetRef="Event_1bfwvgf" />
     <bpmn:textAnnotation id="TextAnnotation_0wa9m3y">
-      <bpmn:text>Exibe Mensagem de texto de boas vindas no console da aplicação</bpmn:text>
+      <bpmn:text>Display a welcome message on console</bpmn:text>
     </bpmn:textAnnotation>
     <bpmn:association id="Association_08x2fsg" sourceRef="service-task-log-on-console" targetRef="TextAnnotation_0wa9m3y" />
   </bpmn:process>
@@ -36,7 +36,7 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="TextAnnotation_0wa9m3y_di" bpmnElement="TextAnnotation_0wa9m3y">
-        <dc:Bounds x="300" y="80" width="248" height="41" />
+        <dc:Bounds x="300" y="80" width="248" height="26" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1xz2w9j_di" bpmnElement="Flow_1xz2w9j">
@@ -49,7 +49,7 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_08x2fsg_di" bpmnElement="Association_08x2fsg">
         <di:waypoint x="331" y="167" />
-        <di:waypoint x="343" y="121" />
+        <di:waypoint x="347" y="106" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

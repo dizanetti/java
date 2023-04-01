@@ -13,32 +13,44 @@
       <bpmn:incoming>Flow_0amuqcz</bpmn:incoming>
       <bpmn:outgoing>Flow_16hm5zy</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:textAnnotation id="TextAnnotation_024mk7b">
+      <bpmn:text>Calculate a new salary with bonus</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0e7g66f" sourceRef="service-calculate-salary" targetRef="TextAnnotation_024mk7b" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="calculate-salary">
+      <bpmndi:BPMNShape id="TextAnnotation_024mk7b_di" bpmnElement="TextAnnotation_024mk7b">
+        <dc:Bounds x="370" y="80" width="220" height="30" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
-        <dc:Bounds x="179" y="99" width="36" height="36" />
+        <dc:Bounds x="179" y="189" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="185" y="142" width="25" height="14" />
+          <dc:Bounds x="185" y="232" width="25" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1q7tv4o_di" bpmnElement="Event_1q7tv4o">
-        <dc:Bounds x="432" y="99" width="36" height="36" />
+        <dc:Bounds x="432" y="189" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="441" y="142" width="20" height="14" />
+          <dc:Bounds x="441" y="232" width="20" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_03ua0le_di" bpmnElement="service-calculate-salary">
-        <dc:Bounds x="270" y="77" width="100" height="80" />
+        <dc:Bounds x="270" y="167" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_0e7g66f_di" bpmnElement="Association_0e7g66f">
+        <di:waypoint x="356" y="167" />
+        <di:waypoint x="407" y="110" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0amuqcz_di" bpmnElement="Flow_0amuqcz">
-        <di:waypoint x="215" y="117" />
-        <di:waypoint x="270" y="117" />
+        <di:waypoint x="215" y="207" />
+        <di:waypoint x="270" y="207" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_16hm5zy_di" bpmnElement="Flow_16hm5zy">
-        <di:waypoint x="370" y="117" />
-        <di:waypoint x="432" y="117" />
+        <di:waypoint x="370" y="207" />
+        <di:waypoint x="432" y="207" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

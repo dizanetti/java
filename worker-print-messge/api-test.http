@@ -7,7 +7,10 @@
 GET {{baseUrl}}/task HTTP/1.1
 
 ### GET task by id
-GET {{baseUrl}}/task/c7a66058-cfa0-11ed-b2da-00090ffe0001 HTTP/1.1
+GET {{baseUrl}}/task/b48352fd-d080-11ed-b120-00090ffe0001 HTTP/1.1
+
+### GET task variables by id
+GET {{baseUrl}}/task/b48352fd-d080-11ed-b120-00090ffe0001/variables HTTP/1.1
 ###### TASKS ######
 ###### PROCESS DEFINITION ######
 
@@ -57,7 +60,7 @@ Content-Type: application/json
 }
 
 ### Verify User
-POST {{baseUrl}}/task/c7a66058-cfa0-11ed-b2da-00090ffe0001/complete HTTP/1.1
+POST {{baseUrl}}/task/25f650d8-cfab-11ed-a6d6-00090ffe0001/complete HTTP/1.1
 Content-Type: application/json
 
 {
