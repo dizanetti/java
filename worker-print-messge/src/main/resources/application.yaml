@@ -1,6 +1,10 @@
-camunda.bpm.admin-user:
-  id: diego
-  password: portalInterno182
+camunda:
+  bpm:
+    database:
+      jdbc-batch-processing: false
+    admin-user:
+      id: diego
+      password: portalInterno182
 
 spring:
   datasource:
