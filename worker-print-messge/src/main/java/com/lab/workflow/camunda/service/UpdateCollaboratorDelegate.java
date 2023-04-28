@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.lab.workflow.camunda.gateway.UpdateCollaboratorInformation;
+import com.lab.workflow.camunda.gateway.collaborator.UpdateCollaboratorGateway;
 
 @Component("updateCollaboratorDelegate")
 public class UpdateCollaboratorDelegate implements JavaDelegate {
@@ -15,15 +15,14 @@ public class UpdateCollaboratorDelegate implements JavaDelegate {
     private final Logger logger = LoggerFactory.getLogger(UpdateCollaboratorDelegate.class.getName());
 
     @Autowired
-    private UpdateCollaboratorInformation updateCollaboratorInformation;
+    private UpdateCollaboratorGateway updateCollaborator;
 
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
         logger.info("Update fields in Data Base to service {}", delegateExecution.getVariable("service"));
 
-        updateCollaboratorInformation.update(
+        updateCollaborator.update(
             Long.parseLong(delegateExecution.getVariable("collaboratorId").toString()), 
-            delegateExecution.getVariables()
-        );
+            delegateExecution.getVariables());
     }
 }

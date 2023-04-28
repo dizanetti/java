@@ -1,7 +1,22 @@
 {"properties": [
   {
-    "name": "portal.url-collaborator",
+    "name": "portal.collaborator.name",
     "type": "java.lang.String",
-    "description": "Uri to collaborator service"
+    "description": "Name for feign to collaborator"
+  },
+  {
+    "name": "portal.collaborator.url",
+    "type": "java.lang.String",
+    "description": "Path to collaborator service"
+  },
+  {
+    "name": "portal.history-approval.name",
+    "type": "java.lang.String",
+    "description": "Name for feign to hisotry approval"
+  },
+  {
+    "name": "portal.history-approval.url",
+    "type": "java.lang.String",
+    "description": "Path to history approval service"
   }
 ]}
