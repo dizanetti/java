@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 @Component("consoleLoggerDelegate")
 public class ConsoleLoggerDelegate implements JavaDelegate {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(ConsoleLoggerDelegate.class.getName());
+    private final Logger logger = LoggerFactory.getLogger(ConsoleLoggerDelegate.class.getName());
 
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
-        LOGGER.info("Welcome: {}", delegateExecution.getVariable("userName"));
+        logger.info("Welcome: {}", delegateExecution.getVariable("userName"));
     }
 }
