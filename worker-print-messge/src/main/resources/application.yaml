@@ -1,3 +1,6 @@
+server:
+  port: 8042
+
 camunda:
   bpm:
     database:

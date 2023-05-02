@@ -1,5 +1,5 @@
 ### path
-@baseUrl = http://localhost:8080/engine-rest
+@baseUrl = http://localhost:8042/engine-rest
 
 ###### TASKS ######
 
@@ -10,7 +10,7 @@ GET {{baseUrl}}/task HTTP/1.1
 GET {{baseUrl}}/task/ecedffb1-d215-11ed-b47d-00090ffe0001 HTTP/1.1
 
 ### GET task variables by id
-GET {{baseUrl}}/task/ecedffb1-d215-11ed-b47d-00090ffe0001/variables HTTP/1.1
+GET {{baseUrl}}/task/7694b3e8-e8d8-11ed-b22c-00090ffe0001/variables HTTP/1.1
 ###### TASKS ######
 ###### PROCESS DEFINITION ######
 
@@ -78,41 +78,57 @@ Content-Type: application/json
 
 {
     "variables": {
+        "service": {
+            "value": "collaborator",
+            "type": "String"
+        },
+        "collaboratorId": {
+            "value": "10",
+            "type": "String"
+        },
         "userName": {
             "value": "diego",
             "type": "String"
         },
-        "address": {
+        "addressOld": {
             "value": "Avenida de São Miguel, 85 - Braga",
             "type": "String"
         },
-        "email": {
-            "value": "935 969 887",
+        "addressNew": {
+            "value": "Rua Algusta de Sá, 182 - Braga",
             "type": "String"
         }
     }
 }
 
 ### Analize and approve
-POST {{baseUrl}}/task/893c929d-d223-11ed-8169-00090ffe0001/complete HTTP/1.1
+POST {{baseUrl}}/task/18aa1660-e90d-11ed-86ba-00090ffe0001/complete HTTP/1.1
 Content-Type: application/json
 
 {
     "variables": {
+        "service": {
+            "value": "collaborator",
+            "type": "String"
+        },
+        "collaboratorId": {
+            "value": "10",
+            "type": "String"
+        },
         "userName": {
             "value": "diego",
             "type": "String"
         },
-        "address": {
+        "addressOld": {
             "value": "Avenida de São Miguel, 85 - Braga",
             "type": "String"
         },
-        "email": {
-            "value": "935 969 887",
+        "addressNew": {
+            "value": "Rua Algusta de Sá, 182 - Braga",
             "type": "String"
         },
         "approved": {
-            "value": false,
+            "value": true,
             "type": "Boolean"
         }
     }
